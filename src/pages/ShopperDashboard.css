@@ -1,0 +1,64 @@
+.shopper-theme {
+  --accent: #2f7a4d;
+  --accent-soft: #e8f3ec;
+  --surface: #ffffff;
+  --border: #dcebe1;
+  background: #f5faf6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.shopper-theme .brand {
+  font-family: 'Quicksand', sans-serif;
+  color: #2f7a4d;
+}
+
+.shopper-exit-link {
+  color: #2f7a4d;
+  border-color: #cfe6d8;
+}
+
+.shopper-exit-link:hover {
+  background: #e8f3ec;
+}
+
+.shopper-score-card {
+  background: linear-gradient(135deg, #2f7a4d, #4a9c6e);
+  color: #fff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.shopper-score-card__tier {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.shopper-score-card__meta {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.shopper-score-card__score {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.shopper-score-card__max {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  padding-bottom: 50px;
+}

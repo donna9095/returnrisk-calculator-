@@ -1,0 +1,223 @@
+/* components.css
+   Structural styles for the four shared components. Color is pulled from
+   CSS variables (--accent, --accent-soft, --surface, --border) that each
+   persona theme defines on its root wrapper, so the same markup reskins
+   automatically per page. Defaults below keep components usable even
+   without a theme wrapper. */
+
+:root {
+  --accent: #2f7a4d;
+  --accent-soft: #e8f3ec;
+  --surface: #ffffff;
+  --border: #e4e4de;
+}
+
+/* ---------- StatCard ---------- */
+
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.stat-card__label {
+  font-size: 13px;
+  color: #6b6b66;
+  margin-bottom: 8px;
+}
+
+.stat-card__value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stat-card__value--warning {
+  color: #c14343;
+}
+
+.stat-card__value--good {
+  color: var(--accent);
+}
+
+.stat-card__subtext {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #8a8a84;
+}
+
+/* ---------- ChartCard ---------- */
+
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.chart-card__header {
+  margin-bottom: 14px;
+}
+
+.chart-card__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.chart-card__subtitle {
+  margin: 4px 0 0 0;
+  font-size: 12.5px;
+  color: #8a8a84;
+}
+
+/* ---------- ProductCard ---------- */
+
+.product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f0f1ee;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-card__category {
+  font-size: 12px;
+  color: #8a8a84;
+}
+
+.product-card__name {
+  margin: 2px 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.product-card__price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.product-card__size-label {
+  font-size: 12px;
+  color: #6b6b66;
+  margin-bottom: 4px;
+}
+
+.product-card__size-select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.product-card__risk-btn {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: filter 150ms ease;
+}
+
+.product-card__risk-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- RiskPopup ---------- */
+
+.risk-popup__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.risk-popup {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 26px 24px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.risk-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  line-height: 1;
+  color: #8a8a84;
+}
+
+.risk-popup__title {
+  margin: 0 0 2px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.risk-popup__size {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #8a8a84;
+}
+
+.risk-popup__gauge-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0 14px 0;
+}
+
+.risk-popup__explanation {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #3a3a36;
+  text-align: left;
+  margin: 0 0 16px 0;
+}
+
+.risk-popup__breakdown-title {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+
+.risk-popup__chart {
+  margin-top: 4px;
+}

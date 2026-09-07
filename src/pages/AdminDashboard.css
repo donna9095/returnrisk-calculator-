@@ -1,0 +1,128 @@
+.admin-theme {
+  --accent: #d7d7d0;
+  --accent-soft: #24241f;
+  --surface: #1c1c19;
+  --border: #33332d;
+  background: #121210;
+  min-height: 100vh;
+  color: #e8e8e2;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-theme .brand {
+  color: #e8e8e2;
+}
+
+.admin-theme .section-heading {
+  color: #e8e8e2;
+}
+
+.admin-exit-link {
+  color: #c7c7bf;
+  border-color: #33332d;
+}
+
+.admin-exit-link:hover {
+  background: #1c1c19;
+}
+
+.admin-theme .stat-card__label {
+  color: #9a9a90;
+}
+
+.admin-theme .stat-card__value {
+  color: #f2f2ec;
+}
+
+.admin-theme .stat-card__value--good {
+  color: #7fbf8f;
+}
+
+.admin-theme .stat-card__subtext {
+  color: #7a7a70;
+}
+
+.model-panel {
+  background: #1c1c19;
+  border: 1px solid #33332d;
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.model-panel__title {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f2f2ec;
+}
+
+.model-panel__meta {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: #8a8a80;
+}
+
+.model-panel__retrain-btn {
+  background: #e8e8e2;
+  color: #121210;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.model-panel__retrain-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.activity-table-wrap {
+  background: #1c1c19;
+  border: 1px solid #33332d;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.activity-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11.5px;
+  color: #8a8a80;
+  padding: 12px 16px;
+  background: #201f1c;
+  border-bottom: 1px solid #33332d;
+}
+
+.activity-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid #262620;
+  color: #d6d6cf;
+}
+
+.activity-table tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-table__time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #9a9a90;
+  white-space: nowrap;
+}
+
+.activity-table__detail {
+  color: #a8a89f;
+}
