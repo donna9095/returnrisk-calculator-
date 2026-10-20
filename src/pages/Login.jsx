@@ -1,115 +1,215 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth, DEMO_USERS } from '../context/AuthContext';
 import './Login.css';
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  const { login } = useAuth();
+
+  const [activeRole, setActiveRole] = useState('shopper');
+  const [idInput, setIdInput] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [signingIn, setSigningIn] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
-  function validate() {
-    const next = {};
-    if (!email.trim()) {
-      next.email = 'Enter your email.';
-    } else if (!EMAIL_PATTERN.test(email.trim())) {
-      next.email = 'Enter a valid email address.';
+  function handleRoleTab(role) {
+    setActiveRole(role);
+    setLoginError('');
+    setErrors({});
+  }
+
+  function handleQuickFill(role) {
+    const creds = DEMO_USERS[role];
+    if (creds) {
+      setActiveRole(role);
+      setIdInput(creds.id);
+      setPassword(creds.password);
+      setLoginError('');
+      setErrors({});
     }
-    if (!password) {
-      next.password = 'Enter your password.';
-    } else if (password.length < 6) {
-      next.password = 'Password must be at least 6 characters.';
-    }
-    return next;
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    const nextErrors = validate();
-    setErrors(nextErrors);
-    if (Object.keys(nextErrors).length > 0) return;
+    setLoginError('');
+    const newErrors = {};
 
-    // No real backend here — this simulates a brief sign-in request, then
-    // routes to the shopper experience. Swap the setTimeout for a real
-    // fetch('/login', { method: 'POST', body: ... }) call when the API exists.
+    if (!idInput.trim()) {
+      newErrors.id = 'Please enter your User ID or Email.';
+    }
+    if (!password) {
+      newErrors.password = 'Please enter your password.';
+    } else if (password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters.';
+    }
+
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length > 0) return;
+
     setSigningIn(true);
+
     setTimeout(() => {
-      navigate('/shopper');
-    }, 600);
+      const result = login(idInput, password, activeRole);
+      setSigningIn(false);
+
+      if (!result.success) {
+        setLoginError(result.error || 'Authentication failed. Please check credentials.');
+        return;
+      }
+
+      // Route to appropriate dashboard based on authenticated role
+      const dest = result.user.role === 'admin'
+        ? '/admin'
+        : result.user.role === 'seller'
+        ? '/seller'
+        : '/shopper';
+
+      navigate(dest);
+    }, 400);
   }
 
   return (
     <div className="login">
-      <div className="login__mark">ReturnLess</div>
-      <h1 className="login__headline">Know a return is coming before it ships back.</h1>
-      <p className="login__subhead">
-        Sign in to check return risk before you buy, or jump straight into a persona view below.
-      </p>
-
-      <form className="login__form" onSubmit={handleSubmit} noValidate>
-        <div className="login__field">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            aria-invalid={Boolean(errors.email)}
-            aria-describedby={errors.email ? 'email-error' : undefined}
-          />
-          {errors.email && (
-            <span id="email-error" className="login__field-error">
-              {errors.email}
-            </span>
-          )}
-        </div>
-
-        <div className="login__field">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="••••••••"
-            aria-invalid={Boolean(errors.password)}
-            aria-describedby={errors.password ? 'password-error' : undefined}
-          />
-          {errors.password && (
-            <span id="password-error" className="login__field-error">
-              {errors.password}
-            </span>
-          )}
-        </div>
-
-        <button type="submit" className="login__submit" disabled={signingIn}>
-          {signingIn ? 'Signing in…' : 'Log in'}
-        </button>
-      </form>
-
-      <div className="login__divider">
-        <span>or jump straight to a view</span>
+      <div className="login__header">
+        <div className="login__mark">ReturnLess</div>
+        <h1 className="login__headline">Pre-Dispatch E-Commerce Return Defense</h1>
+        <p className="login__subhead">
+          Secure Role-Based Portal. Sign in with your ID and password to access your role dashboard.
+        </p>
       </div>
 
-      <div className="login__options">
-        <button className="login__option login__option--shopper" onClick={() => navigate('/shopper')}>
-          <span className="login__option-label">Shopper</span>
-          <span className="login__option-desc">Browse products and check fit risk before buying</span>
-        </button>
+      <div className="login__card">
+        {/* Role Selector Tabs */}
+        <div className="login__role-tabs">
+          <button
+            type="button"
+            className={`login__role-tab ${activeRole === 'shopper' ? 'active shopper' : ''}`}
+            onClick={() => handleRoleTab('shopper')}
+          >
+            🛍️ Shopper
+          </button>
+          <button
+            type="button"
+            className={`login__role-tab ${activeRole === 'seller' ? 'active seller' : ''}`}
+            onClick={() => handleRoleTab('seller')}
+          >
+            🏪 Seller
+          </button>
+          <button
+            type="button"
+            className={`login__role-tab ${activeRole === 'admin' ? 'active admin' : ''}`}
+            onClick={() => handleRoleTab('admin')}
+          >
+            🛡️ Admin
+          </button>
+        </div>
 
-        <button className="login__option login__option--seller" onClick={() => navigate('/seller')}>
-          <span className="login__option-label">Seller</span>
-          <span className="login__option-desc">Track return rates and spot high-risk orders</span>
-        </button>
+        {loginError && (
+          <div className="login__alert-error">
+            ⚠️ {loginError}
+          </div>
+        )}
 
-        <button className="login__option login__option--admin" onClick={() => navigate('/admin')}>
-          <span className="login__option-label">Admin</span>
-          <span className="login__option-desc">Monitor the platform and the prediction model</span>
-        </button>
+        <form className="login__form" onSubmit={handleSubmit} noValidate>
+          <div className="login__field">
+            <label htmlFor="idInput">
+              {activeRole === 'seller' ? 'Seller ID / Email' : activeRole === 'admin' ? 'Admin ID / Email' : 'Shopper ID / Email'}
+            </label>
+            <input
+              id="idInput"
+              type="text"
+              value={idInput}
+              onChange={(e) => {
+                setIdInput(e.target.value);
+                setLoginError('');
+              }}
+              placeholder={
+                activeRole === 'seller'
+                  ? 'e.g. seller or seller@returnless.com'
+                  : activeRole === 'admin'
+                  ? 'e.g. admin or admin@returnless.com'
+                  : 'e.g. shopper or shopper@returnless.com'
+              }
+              aria-invalid={Boolean(errors.id)}
+            />
+            {errors.id && <span className="login__field-error">{errors.id}</span>}
+          </div>
+
+          <div className="login__field">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <label htmlFor="password">Password</label>
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ background: 'none', border: 'none', color: '#64748b', fontSize: '11px', cursor: 'pointer' }}
+              >
+                {showPassword ? 'Hide' : 'Show'}
+              </button>
+            </div>
+            <input
+              id="password"
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setLoginError('');
+              }}
+              placeholder="••••••••"
+              aria-invalid={Boolean(errors.password)}
+            />
+            {errors.password && <span className="login__field-error">{errors.password}</span>}
+          </div>
+
+          <button type="submit" className="login__submit" disabled={signingIn}>
+            {signingIn ? 'Verifying Credentials…' : `Log in as ${activeRole.charAt(0).toUpperCase() + activeRole.slice(1)}`}
+          </button>
+        </form>
+
+        {/* Demo Credentials Helper */}
+        <div className="login__demo-box">
+          <div className="login__demo-title">🔑 Demonstration Credentials:</div>
+          <div className="login__demo-items">
+            <div className="login__demo-item">
+              <div>
+                <strong>Shopper:</strong> <code>shopper</code> / <code>password123</code>
+              </div>
+              <button
+                type="button"
+                className="login__quick-fill-btn"
+                onClick={() => handleQuickFill('shopper')}
+              >
+                Auto Fill
+              </button>
+            </div>
+            <div className="login__demo-item">
+              <div>
+                <strong>Seller:</strong> <code>seller</code> / <code>password123</code>
+              </div>
+              <button
+                type="button"
+                className="login__quick-fill-btn"
+                onClick={() => handleQuickFill('seller')}
+              >
+                Auto Fill
+              </button>
+            </div>
+            <div className="login__demo-item">
+              <div>
+                <strong>Admin:</strong> <code>admin</code> / <code>password123</code>
+              </div>
+              <button
+                type="button"
+                className="login__quick-fill-btn"
+                onClick={() => handleQuickFill('admin')}
+              >
+                Auto Fill
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

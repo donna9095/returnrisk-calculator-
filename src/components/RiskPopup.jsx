@@ -75,6 +75,12 @@ export default function RiskPopup({ report, productName, onClose }) {
         </div>
 
         <p className="risk-popup__explanation">{report.explanation}</p>
+        {report.suggestedAction && (
+          <div style={{ margin: '10px 0 16px', padding: '10px 12px', background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: '6px', fontSize: '13px', color: '#1e293b', textAlign: 'left', lineHeight: '1.4' }}>
+            <span style={{ fontWeight: '600', color: '#0f172a' }}>🎯 Prescriptive Action: </span>
+            {report.suggestedAction}
+          </div>
+        )}
 
         <h4 className="risk-popup__breakdown-title">Why this score</h4>
         <div className="risk-popup__chart">

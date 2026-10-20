@@ -5,180 +5,223 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 24px;
-  background: #f6f7f5;
+  padding: 40px 20px;
+  background: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.login__header {
+  margin-bottom: 24px;
 }
 
 .login__mark {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  color: #1c1c1c;
-  margin-bottom: 28px;
+  font-weight: 800;
+  font-size: 24px;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
 }
 
 .login__headline {
-  font-size: clamp(26px, 4vw, 38px);
+  font-size: clamp(22px, 3.5vw, 32px);
   font-weight: 700;
-  max-width: 620px;
+  max-width: 580px;
   line-height: 1.25;
-  margin: 0 0 12px 0;
-  color: #1c1c1c;
+  margin: 0 0 8px 0;
+  color: #1e293b;
 }
 
 .login__subhead {
-  font-size: 15px;
-  color: #6b6b66;
-  max-width: 440px;
-  margin: 0 0 28px 0;
+  font-size: 14px;
+  color: #64748b;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.login__card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  padding: 28px;
+  text-align: left;
+}
+
+.login__role-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.login__role-tab {
+  border: none;
+  background: transparent;
+  padding: 8px 6px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.login__role-tab.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.login__role-tab.active.shopper {
+  color: #166534;
+}
+
+.login__role-tab.active.seller {
+  color: #1e40af;
+}
+
+.login__role-tab.active.admin {
+  color: #0f172a;
+}
+
+.login__alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  line-height: 1.4;
 }
 
 .login__form {
-  width: 100%;
-  max-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 30px;
-  text-align: left;
+  gap: 16px;
 }
 
 .login__field {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 
 .login__field label {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
-  color: #3a3a36;
+  color: #334155;
 }
 
 .login__field input {
-  border: 1px solid #e4e4de;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   font-size: 14px;
   font-family: inherit;
-  background: #fff;
+  background: #ffffff;
+  transition: border-color 150ms ease;
 }
 
 .login__field input:focus {
-  border-color: #2f7a4d;
+  border-color: #2563eb;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .login__field input[aria-invalid='true'] {
-  border-color: #c14343;
+  border-color: #ef4444;
 }
 
 .login__field-error {
   font-size: 12px;
-  color: #c14343;
+  color: #ef4444;
+  font-weight: 500;
 }
 
 .login__submit {
   border: none;
-  background: #1c1c1c;
-  color: #fff;
-  padding: 11px 14px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 16px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
-  margin-top: 4px;
-  transition: filter 150ms ease;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 150ms ease;
 }
 
 .login__submit:hover:not(:disabled) {
-  filter: brightness(1.15);
+  background: #1e293b;
 }
 
 .login__submit:disabled {
   opacity: 0.65;
-  cursor: default;
+  cursor: not-allowed;
 }
 
-.login__divider {
-  width: 100%;
-  max-width: 320px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 26px;
-  color: #9a9a90;
+.login__demo-box {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.login__demo-title {
   font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
-.login__divider::before,
-.login__divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: #e4e4de;
-}
-
-.login__options {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 220px));
-  gap: 16px;
-}
-
-@media (max-width: 640px) {
-  .login__options {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 280px;
-  }
-}
-
-.login__option {
-  border: 1px solid #e4e4de;
-  background: #fff;
-  border-radius: 12px;
-  padding: 22px 18px;
+.login__demo-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  text-align: left;
-  border-top: 3px solid transparent;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  gap: 8px;
 }
 
-.login__option:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.login__option-label {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.login__option-desc {
+.login__demo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 7px 10px;
+  border-radius: 6px;
   font-size: 12.5px;
-  color: #77776f;
-  line-height: 1.4;
+  color: #334155;
 }
 
-.login__option--shopper {
-  border-top-color: #2f7a4d;
-}
-.login__option--shopper .login__option-label {
-  color: #2f7a4d;
-}
-
-.login__option--seller {
-  border-top-color: #2a5ea6;
-}
-.login__option--seller .login__option-label {
-  color: #2a5ea6;
+.login__demo-item code {
+  background: #e2e8f0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 11.5px;
+  color: #0f172a;
 }
 
-.login__option--admin {
-  border-top-color: #1c1c1c;
+.login__quick-fill-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 120ms ease;
 }
-.login__option--admin .login__option-label {
-  color: #1c1c1c;
+
+.login__quick-fill-btn:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
 }

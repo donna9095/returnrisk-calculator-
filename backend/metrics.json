@@ -1,0 +1,20 @@
+{
+  "Logistic Regression": {
+    "Precision": 0.918,
+    "Recall": 0.869,
+    "F1": 0.893,
+    "ROC-AUC": 0.96
+  },
+  "Random Forest": {
+    "Precision": 0.913,
+    "Recall": 0.87,
+    "F1": 0.891,
+    "ROC-AUC": 0.955
+  },
+  "XGBoost (Champion)": {
+    "Precision": 0.914,
+    "Recall": 0.875,
+    "F1": 0.894,
+    "ROC-AUC": 0.957
+  }
+}

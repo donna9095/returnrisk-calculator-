@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import StatCard from '../components/StatCard';
 import { adminStats, activityLog } from '../mockData/mockData';
 import './AdminDashboard.css';
 
 export default function AdminDashboard() {
+  const { user, logout } = useAuth();
   const [retraining, setRetraining] = useState(false);
 
   // Non-functional by design (per spec) — just simulates a state change
@@ -17,10 +18,15 @@ export default function AdminDashboard() {
   return (
     <div className="admin-theme">
       <div className="top-bar">
-        <span className="brand">ReturnLess</span>
-        <Link to="/" className="exit-link admin-exit-link">
-          Switch view
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span className="brand">ReturnLess</span>
+          <span style={{ fontSize: '12px', background: '#0f172a', color: '#ffffff', padding: '3px 10px', borderRadius: '12px', fontWeight: '600' }}>
+            🛡️ Admin: {user?.id || 'admin'}
+          </span>
+        </div>
+        <button onClick={logout} className="exit-link admin-exit-link" style={{ cursor: 'pointer', background: 'transparent' }}>
+          Log out
+        </button>
       </div>
 
       <div className="container">

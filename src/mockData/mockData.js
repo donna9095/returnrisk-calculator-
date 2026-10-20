@@ -37,7 +37,7 @@ export const products = [
     name: 'Okane Solid Men\'s Polo Neck T-Shirt',
     category: 'Clothing',
     price: 699.0,
-    image: 'https://img5a.flixcart.com/image/t-shirt/3/z/v/ot-9162-d-khaki-okane-xxl-original-imae8hfeerhvdk2a.jpeg',
+    image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -45,7 +45,7 @@ export const products = [
     name: 'Tapyti Casual Short Sleeve Solid Women\'s Top',
     category: 'Clothing',
     price: 681.0,
-    image: 'https://img6a.flixcart.com/image/top/x/h/x/1-1-tap-lt-1065-tapyti-l-original-imaeyvue2hrw6urs.jpeg',
+    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -53,7 +53,7 @@ export const products = [
     name: 'Norwood Striped Men\'s Polo Neck T-Shirt',
     category: 'Clothing',
     price: 349.0,
-    image: 'https://img5a.flixcart.com/image/t-shirt/m/k/u/nwmultilb-norwood-xl-original-imae5pjhqeuyykhz.jpeg',
+    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -61,7 +61,7 @@ export const products = [
     name: 'Starsy Printed Women\'s Round Neck White T-Shirt',
     category: 'Clothing',
     price: 879.0,
-    image: 'https://img5a.flixcart.com/image/t-shirt/a/a/9/ts0143white-starsy-xxl-1000x1000-imaegf432hen7c66.jpeg',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -69,7 +69,7 @@ export const products = [
     name: 'maggie Women\'s Empire Waist Dress',
     category: 'Clothing',
     price: 999.0,
-    image: 'https://img6a.flixcart.com/image/dress/h/h/k/1-1-mg211-maggie-36-original-imaechwvhd9vqzdf.jpeg',
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -77,7 +77,7 @@ export const products = [
     name: 'YK Regular Fit Boy\'s Jeans',
     category: 'Clothing',
     price: 839.0,
-    image: 'https://img6a.flixcart.com/image/jean/8/z/x/1098764-yk-4-5-years-original-imaegwsqvjhnhzex.jpeg',
+    image: 'https://images.unsplash.com/photo-1542272604-780c96856592?w=600&auto=format&fit=crop&q=80',
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
   },
   {
@@ -85,7 +85,7 @@ export const products = [
     name: 'Zobello Casual Shoes',
     category: 'Footwear',
     price: 1599.0,
-    image: 'https://img6a.flixcart.com/image/shoe/y/e/z/black-mesh-91028a-zobello-11-original-imaeefgsvadqzqk3.jpeg',
+    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -93,7 +93,7 @@ export const products = [
     name: 'Arden Terry Derby Boots',
     category: 'Footwear',
     price: 1644.0,
-    image: 'https://img5a.flixcart.com/image/shoe/2/2/v/brown-198856-bd3-arden-42-1000x1000-imaecabuyx3fgbqr.jpeg',
+    image: 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -101,7 +101,7 @@ export const products = [
     name: 'BrandTrendz Loafers',
     category: 'Footwear',
     price: 599.0,
-    image: 'https://img5a.flixcart.com/image/shoe/f/x/z/blue-t-s538bl-brandtrendz-10-original-imaeg32cntcxzfsv.jpeg',
+    image: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -109,7 +109,7 @@ export const products = [
     name: 'Asian Walking Shoes',
     category: 'Footwear',
     price: 499.0,
-    image: 'https://img5a.flixcart.com/image/shoe/p/8/w/white-expo-asian-38-original-imaehgmwhxfgd4se.jpeg',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -117,7 +117,7 @@ export const products = [
     name: 'Katalogue Women, Girls Flats',
     category: 'Footwear',
     price: 1750.0,
-    image: 'https://img5a.flixcart.com/image/sandal/h/r/z/brown47-katalogue42-katalogue-38-original-imaehzhyn3xsfj9h.jpeg',
+    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -125,7 +125,7 @@ export const products = [
     name: 'Arden Walker Derby Corporate Casuals',
     category: 'Footwear',
     price: 1994.0,
-    image: 'https://img6a.flixcart.com/image/shoe/j/k/d/brown-198898-b-arden-42-original-imadysh4uwyfun8k.jpeg',
+    image: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&auto=format&fit=crop&q=80',
     sizes: ['6', '7', '8', '9', '10'],
   },
   {
@@ -133,7 +133,7 @@ export const products = [
     name: 'Vatsalya Creation Traditional Alloy Jewel Set',
     category: 'Jewellery',
     price: 900.0,
-    image: 'https://img5a.flixcart.com/image/jewellery-set/f/s/k/4003-rw-vatsalya-creation-original-imae7pzbx6d9wevz.jpeg',
+    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -141,7 +141,7 @@ export const products = [
     name: 'Imitzworld Alloy Necklace',
     category: 'Jewellery',
     price: 349.0,
-    image: 'https://img5a.flixcart.com/image/necklace-chain/m/s/e/105imwns-imitzworld-necklace-original-imaebud9nzwefmgz.jpeg',
+    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -149,7 +149,7 @@ export const products = [
     name: 'KUHUK Plastic Bangle Set',
     category: 'Jewellery',
     price: 350.0,
-    image: 'https://img6a.flixcart.com/image/bangle-bracelet-armlet/a/t/9/tbc244-2-6-kuhuk-9-1100x1100-imae8yzznxwuzfsg.jpeg',
+    image: 'https://images.unsplash.com/photo-1611591475878-1a742a0b41aa?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -157,7 +157,7 @@ export const products = [
     name: 'Fashion Pitaraa Stainless Steel Necklace',
     category: 'Jewellery',
     price: 378.0,
-    image: 'https://img5a.flixcart.com/image/necklace-chain/4/q/g/fpfs152280-fashion-pitaraa-necklace-original-imaecnh3qatygkfp.jpeg',
+    image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -165,7 +165,7 @@ export const products = [
     name: 'Junk Yamini Plastic Necklace',
     category: 'Jewellery',
     price: 300.0,
-    image: 'https://img6a.flixcart.com/image/necklace-chain/x/x/s/mod-n1052-junk-necklace-1100x1100-imaecf8ggrzmwzjp.jpeg',
+    image: 'https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -173,7 +173,7 @@ export const products = [
     name: 'Shivam Plastic Chudas',
     category: 'Jewellery',
     price: 600.0,
-    image: 'https://img6a.flixcart.com/image/bangle-bracelet-armlet/h/3/k/kuhul653-2-6-shivam-74-1100x1100-imaee8yaz3skawbr.jpeg',
+    image: 'https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -181,7 +181,7 @@ export const products = [
     name: 'Swiss Trend Artshai1630 Premium Analog Watch - For Men',
     category: 'Watches',
     price: 899.0,
-    image: 'https://img6a.flixcart.com/image/watch/y/v/g/artshai1630-swiss-trend-original-imae9ywmhpfx35aj.jpeg',
+    image: 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -189,7 +189,7 @@ export const products = [
     name: 'Forex 5501LT01 Casual Analog Watch - For Men',
     category: 'Watches',
     price: 995.0,
-    image: 'https://img6a.flixcart.com/image/watch/7/w/m/5501lt01-forex-original-imae7ez9aac2urfx.jpeg',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -197,7 +197,7 @@ export const products = [
     name: 'Playboy BPB-1002-C Analog Watch - For Women',
     category: 'Watches',
     price: 3310.0,
-    image: 'https://img5a.flixcart.com/image/watch/h/b/u/bpb-1002-c-playboy-original-imadppjqqzy7vgv5.jpeg',
+    image: 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -205,7 +205,7 @@ export const products = [
     name: 'Perucci PC-312 Analog Watch - For Men',
     category: 'Watches',
     price: 1395.0,
-    image: 'https://img6a.flixcart.com/image/watch/y/g/j/pc-312-perucci-original-imae3ff3ubcfvqg5.jpeg',
+    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -213,7 +213,7 @@ export const products = [
     name: 'Maxima 04608CMGY Gold Analog Watch - For Men',
     category: 'Watches',
     price: 675.0,
-    image: 'https://img5a.flixcart.com/image/watch/b/w/d/04608cmgy-maxima-original-imadzch7kg7tyadf.jpeg',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -221,7 +221,7 @@ export const products = [
     name: 'HMT B0348 Analog Watch - For Women',
     category: 'Watches',
     price: 595.0,
-    image: 'https://img5a.flixcart.com/image/watch/e/t/e/b0348-hmt-1100x1360-imadzryxyhwvk7zu.jpeg',
+    image: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -229,7 +229,7 @@ export const products = [
     name: 'Zwart GURNER 25 L Medium Laptop Backpack',
     category: 'Bags, Wallets & Belts',
     price: 492.0,
-    image: 'https://img6a.flixcart.com/image/backpack/s/n/g/gurner-zwart-laptop-backpack-gurner-b-original-imaeajyby4kf5dh3.jpeg',
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -237,7 +237,7 @@ export const products = [
     name: 'Angelfish Silk Potali Potli',
     category: 'Bags, Wallets & Belts',
     price: 399.0,
-    image: 'https://img6a.flixcart.com/image/pouch-potli/u/x/v/aelkabj01224-a-angelfish-potli-silk-potali-original-imaeeprygdj223es.jpeg',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -245,7 +245,7 @@ export const products = [
     name: 'MOOI-ZAK Girls, Women Blue PU Sling Bag',
     category: 'Bags, Wallets & Belts',
     price: 449.0,
-    image: 'https://img6a.flixcart.com/image/sling-bag/y/r/r/ctwrk-sr1-mooi-zak-sling-bag-trendy-stylish-blue-sling-bag-ctwrk-1000x1000-imaejnvgzgryerdg.jpeg',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -253,7 +253,7 @@ export const products = [
     name: 'Legato Rugsack Bag 2.5 L Backpack',
     category: 'Bags, Wallets & Belts',
     price: 989.0,
-    image: 'https://img5a.flixcart.com/image/backpack/g/f/2/rs0400012prn-new-legato-backpack-rugsack-bag-original-imaeguzuhgvxwmxn.jpeg',
+    image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -261,7 +261,7 @@ export const products = [
     name: 'Ligans NY Women Beige PU Sling Bag',
     category: 'Bags, Wallets & Belts',
     price: 1295.0,
-    image: 'https://img5a.flixcart.com/image/sling-bag/n/k/t/lny-lb-mo-7147-ligans-ny-sling-bag-easton-mo-original-imae3vx6zvhgughx.jpeg',
+    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
   {
@@ -269,7 +269,7 @@ export const products = [
     name: 'U United WILD FLOWER 14 L Backpack',
     category: 'Bags, Wallets & Belts',
     price: 615.0,
-    image: 'https://img6a.flixcart.com/image/backpack/n/b/m/wldflwr01-u-united-backpack-wild-flower-original-imaegurvzkpvazg3.jpeg',
+    image: 'https://images.unsplash.com/photo-1546938576-6e6a64f317cc?w=600&auto=format&fit=crop&q=80',
     sizes: ['One Size'],
   },
 ];

@@ -1,8 +1,19 @@
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
 
 # production
 /build
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
 
 # misc
 .DS_Store
